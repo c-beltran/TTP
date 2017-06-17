@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bulletin Board Codealong</title>
+	<style type="text/css">
+
+		h1{
+			text-align: center;
+		}
+		h2{
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			color: #000;
+			text-align: center;
+		}
+
+		p{
+			text-align: center;
+
+		}
+		#title{
+			font-family: fantasy;
+			color: rgb(241, 46, 133);
+			border-radius: 40px;
+			text-align: center;
+		}
+		#paragraph{
+			width: 700px;
+			margin-left: 20%;
+
+		}
+		#message{
+			text-align: center;
+			font-family: arial;
+			color: rgb(8,156,200);
+			border-radius: 75px;
+			margin-bottom: 30px;
+		}
+		#posted_msgs{
+			margin-top: 20px;
+			border: solid;
+			border-width: 20px;
+			color: rgb(137,156, 200);
+		}
+		#input_center{
+			margin-left: 500px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Welcome To Post It!</h1>
+	<div id="paragraph">
+	<p> Here, you can post anything you want. Feel free to tell us what you are thinking about, what you feel, how your day was, basically express your self! dont be shy and join the community. I highly suggest you also post problems so others can help you solve them! </p>
+	</div>
+	<div id="input_center">
+		<form method='post' action='/message'>
+			<label for="title">Title: </label> <br>
+			<input type="text" id="title" name="title"><br>
+			<label for="messagebody">Message body: </label> <br>
+			<textarea id="messagebody" name="messagebody"></textarea><br>
+			<input type="submit">
+		</form>
+	</div>
+	<div id="posted_msgs">
+		<h2>Posted Messages</h2>
+
+		<% for(var i = 0; i < allMessages.length; i++) { %>
+
+		<div id="title"> <strong>Title:</strong> <%= allMessages[i].title %> </div>
+
+		<div id="message"> <strong>Message:</strong> <%= allMessages[i].body %> </div>
+
+		<% } %>
+	</div>
+</body>
+</html>

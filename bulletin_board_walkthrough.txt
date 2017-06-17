@@ -1,0 +1,52 @@
+Last login: Thu Jun 15 10:30:05 on ttys002
+Carloss-MacBook-Pro-3:~ Carlos$ cd desktop
+Carloss-MacBook-Pro-3:desktop Carlos$ cd desktop
+-bash: cd: desktop: No such file or directory
+Carloss-MacBook-Pro-3:desktop Carlos$ cd database
+Carloss-MacBook-Pro-3:database Carlos$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (DATABASE) 
+Sorry, name can no longer contain capital letters.
+name: (DATABASE) 
+Sorry, name can no longer contain capital letters.
+name: (DATABASE) bulletin_board
+version: (1.0.0) 
+description: bulletin board application
+entry point: (index.js) 
+test command: 
+git repository: 
+keywords: 
+author: Carlos Beltran
+license: (ISC) 
+About to write to /Users/Carlos/Desktop/DATABASE/package.json:
+
+{
+  "name": "bulletin_board",
+  "version": "1.0.0",
+  "description": "bulletin board application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Beltran",
+  "license": "ISC"
+}
+
+
+Is this ok? (yes) y
+Carloss-MacBook-Pro-3:database Carlos$ npm install --save express pg
+bulletin_board@1.0.0 /Users/Carlos/Desktop/DATABASE
+├─┬ express@4.15.3 
+...........................................................................
+
+npm WARN bulletin_board@1.0.0 No repository field.
+Carloss-MacBook-Pro-3:database Carlos$ 
